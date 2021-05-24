@@ -1,0 +1,13 @@
+@import 'layout';
+
+.abc {
+    height: 10px;
+    width: 100%;
+    display: none;
+
+}
+
+.xyz {
+    transform: rotate(0deg);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
