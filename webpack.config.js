@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 
@@ -36,7 +35,6 @@ module.exports = (env, args) => {
         },
         plugins: [
             new HtmlWebpackPlugin({template: path.resolve(__dirname, './static/index.html')}),
-            new CleanWebpackPlugin(),
             new webpack.ProgressPlugin(progressHandler)
         ]
     },

@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = () => ({
     module: {
         rules: [
@@ -14,10 +12,10 @@ module.exports = () => ({
             }
         ]
     },
+    target: 'web',
     devServer: {
         historyApiFallback: true,
-        contentBase: path.resolve(__dirname, 'Build'),
-        open: true,
-        
+        contentBase: './dist',
+        open: true,   
     }
 })
