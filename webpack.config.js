@@ -34,6 +34,15 @@ module.exports = (env, args) => {
             exclude: /node_modules/,
             use: ['babel-loader'],
           },
+          {
+            test: /\.(jpg|jpeg|gif|png)$/,
+            use: [
+              {
+                loader: 'url-loader',
+                // other option goes here
+              },
+            ],
+          },
         ],
       },
       resolve: {
