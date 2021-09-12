@@ -1,15 +1,16 @@
 import React from 'react';
-import Common from './common.jsx';
+import { useSelector } from 'react-redux';
 
+const CompB = () => {
+  // const name = useSelector((state) => state.count.name);
+  const name = useSelector((state) => state.name.name);
 
-const CompB = (props) => {
-    return ( <
-        div >
-        Component <
-        Common / >
-        <
-        /div>
-    );
-}
+  return (
+    <>
+      <div>Component B</div>
+      <div>Name {name}</div>
+    </>
+  );
+};
 
 export default CompB;
